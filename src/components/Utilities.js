@@ -3,13 +3,9 @@ const handleMouseOver = () => {
   cursor.classList = "hover";
   const circle = document.getElementById("circle");
   circle.classList = "hover";
-  // console.log("mousing over");
-  // const tooltip = document.getElementById("tooltip");
-  // tooltip.style.visibility = "visible";
 };
 
 const handleMouseOut = () => {
-  // console.log("mouseout");
   const cursor = document.getElementById("cursor");
   const circle = document.getElementById("circle");
 
@@ -25,11 +21,8 @@ let pageTop = 0;
 const closeMenu = (e) => {
   const main = document.getElementsByTagName("main");
   const footer = document.getElementsByTagName("footer");
-  // main[0].style.height = "50vh";
   main[0].style.display = "block";
   footer[0].style.display = "block";
-
-  // console.log(e.target);
   if (
     e.target.id === "menu-toggle" ||
     e.target.parentElement.id === "menu-toggle"
@@ -54,7 +47,6 @@ const openMenu = () => {
   pageTop = window.pageYOffset;
   const main = document.getElementsByTagName("main");
   const footer = document.getElementsByTagName("footer");
-  // main[0].style.height = "50vh";
   main[0].style.display = "none";
   footer[0].style.display = "none";
 
@@ -77,8 +69,8 @@ const makeCursorLinkBehavior = () => {
   }
 };
 
-const makeFunLetters = () => {
-  const heading = document.getElementsByClassName("intro")[0].childNodes[0];
+const prepWordsForFun = (idName) => {
+  const heading = document.getElementById(idName);
   const words = heading.innerHTML.split(" ");
 
   const letters = words.map((word) => {
@@ -90,6 +82,10 @@ const makeFunLetters = () => {
   heading.innerHTML = letterWords
     .map((letterWord) => `<div class="word">${letterWord}</div>`)
     .join("<div class='fly'>&nbsp;</div>");
+};
+
+const makeFunLetters = (idName) => {
+  prepWordsForFun(idName);
 
   const flyingLetters = document.getElementsByClassName("fly");
   const inlineWords = document.getElementsByClassName("word");
@@ -111,6 +107,38 @@ const makeFunLetters = () => {
   }
 };
 
+const makeFunLetters2 = (idName) => {
+  prepWordsForFun(idName);
+
+  const typingLetters = document.getElementsByClassName("fly");
+  const inlineWords = document.getElementsByClassName("word");
+
+  for (let inlineWord of inlineWords) {
+    inlineWord.style.display = "inline-block";
+  }
+
+  for (let i = 0; i < typingLetters.length; i++) {
+    typingLetters[i].style.display = "inline-block";
+    typingLetters[i].style.opacity = 0;
+    typingLetters[i].style.transition = "all .5s ease-in-out";
+    setTimeout(() => {
+      typingLetters[i].style.transform = "translateY(0px)";
+      typingLetters[i].style.opacity = 100;
+    }, 200 + i * 100);
+  }
+};
+
+const FadeInUp = (idName) => {
+  const button = document.getElementById(idName);
+  button.style.opacity = 0;
+  button.style.transform = "translateY(50px)";
+  button.style.transition = "all 1s ease-in-out";
+  setTimeout(() => {
+    button.style.opacity = 100;
+    button.style.transform = "translateY(-20px)";
+  }, 100);
+};
+
 const Utilities = {
   handleMouseOut,
   handleMouseOver,
@@ -118,6 +146,8 @@ const Utilities = {
   openMenu,
   makeCursorLinkBehavior,
   makeFunLetters,
+  makeFunLetters2,
+  FadeInUp,
 };
 
 export default Utilities;

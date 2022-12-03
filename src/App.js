@@ -6,7 +6,6 @@ import About from "./pages/about";
 import Work from "./pages/work";
 import Ceramics from "./pages/ceramics";
 import Contact from "./pages/contact";
-import IntroToCompilers from "./pages/intro-to-compilers.jsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Utilities from "./components/Utilities";

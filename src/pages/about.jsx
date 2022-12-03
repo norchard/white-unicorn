@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Utilities from "../components/Utilities";
-import { NavLink as Link } from "react-router-dom";
+import HireButton from "../components/HireButton";
 
 class About extends Component {
-  state = {};
   componentDidMount() {
     Utilities.makeCursorLinkBehavior();
     // const hand = document.getElementById("hand");
@@ -12,18 +11,20 @@ class About extends Component {
     // setTimeout(() => {
     //   hand.style.transform = "rotate(0deg)";
     // }, 100);
-    // Utilities.makeFunLetters();
+    Utilities.makeFunLetters2("intro-about");
   }
 
   render() {
     return (
       <main>
-        <div className="intro-about">
-          <div className="wave">
-            <h1>👋 </h1>
-          </div>
-          <h1 className="display-2">Hi, I'm Nicole.</h1>
+        {/* <div id="intro-about"> */}
+        <div className="wave">
+          <h1>👋 </h1>
         </div>
+        <h1 id="intro-about" className="display-2">
+          Hi, I'm Nicole.
+        </h1>
+        {/* </div> */}
         <p className="about">
           I am a self-taught web developer and graphic designer. In undergrad I
           studied History and Studio Art, but I was most capivated by my single
@@ -45,11 +46,7 @@ class About extends Component {
           full-time work doing front-end development, I'll be here honing my
           craft, recreating work I admire.
         </p>
-        <div>
-          <Link to="/contact">
-            <button className="button gradient">Hire Me</button>
-          </Link>
-        </div>
+        <HireButton />
       </main>
     );
   }

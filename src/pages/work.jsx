@@ -7,6 +7,7 @@ class Work extends Component {
 
   componentDidMount() {
     Utilities.makeCursorLinkBehavior();
+    Utilities.FadeInUp("projects");
   }
 
   render() {
@@ -38,7 +39,7 @@ class Work extends Component {
               </p>
             </div>
           </div>
-          <div className="row m-4">
+          <div id="projects" className="row m-4">
             <div className="col-md-12 col-lg-6">
               <a
                 target="blank"

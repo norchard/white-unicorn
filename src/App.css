@@ -429,7 +429,7 @@ li.menu-item:hover .stack-text {
 
 /********************* Home Page Styles *********************/
 
-.intro {
+#intro {
   max-width: 710px;
   margin: 0px auto 100px auto;
   padding: 100px 0 100px 0;
@@ -437,11 +437,6 @@ li.menu-item:hover .stack-text {
 
 /********************* About Page Styles *********************/
 
-.intro-about {
-  max-width: 480px;
-  margin: 0px auto;
-  padding: 5vh 0 0 0;
-}
 .about {
   max-width: 1100px;
   margin: 0px auto;
@@ -666,6 +661,7 @@ li.menu-item:hover .stack-text {
   }
 }
 .wave {
+  margin-top: 80px;
   -webkit-animation: rotating 2s linear infinite;
   -moz-animation: rotating 2s linear infinite;
   -ms-animation: rotating 2s linear infinite;
@@ -673,7 +669,7 @@ li.menu-item:hover .stack-text {
   animation: rotating 2s linear infinite;
 }
 
-.contact-intro {
+#contact-intro {
   padding-top: 8vh;
 }
 
@@ -687,6 +683,14 @@ li.menu-item:hover .stack-text {
   transition: all 1s ease-in-out;
 }
 
+#gallery {
+  padding-top: 100px;
+}
+
+#formButton {
+  margin-top: 50px;
+}
+
 /********************* Mobile Styles *********************/
 
 @media (max-width: 992px) {
@@ -697,7 +701,7 @@ li.menu-item:hover .stack-text {
   footer {
     padding: 50px 60px;
   }
-  .intro {
+  #intro {
     padding: 200px 20px 30px 20px;
   }
 
@@ -728,7 +732,7 @@ li.menu-item:hover .stack-text {
     padding: 0px;
     text-align: left;
   }
-  .contact-intro {
+  #contact-intro {
     padding-top: 150px;
   }
 

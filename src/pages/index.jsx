@@ -2,7 +2,7 @@ import React, { Component } from "react";
 // import Image from "../components/Gallery/Image";
 import Gallery from "../components/Gallery";
 import Utilities from "../components/Utilities";
-import { NavLink as Link } from "react-router-dom";
+import HireButton from "../components/HireButton";
 
 class Home extends Component {
   constructor() {
@@ -55,19 +55,16 @@ class Home extends Component {
   // };
   componentDidMount() {
     Utilities.makeCursorLinkBehavior();
-    Utilities.makeFunLetters();
+    Utilities.makeFunLetters("intro");
   }
 
   render() {
     return (
       <main>
         <div className="container-fluid">
-          <div className="intro">
-            <h3 className="display-3">
-              I am a front-end developer who enjoys re-creating work that I
-              admire
-            </h3>
-          </div>
+          <h3 id="intro" className="display-3">
+            I am a front-end developer who enjoys re-creating work that I admire
+          </h3>
 
           {/* <div className="image-container">
           <img src={require("../assets/nelson-farms.jpg")} />{" "}
@@ -83,11 +80,7 @@ class Home extends Component {
             onMouseOver={Utilities.handleMouseOver}
             onMouseOut={Utilities.handleMouseOut}
           />
-          <div>
-            <Link to="/contact">
-              <button className="button gradient">Hire Me</button>
-            </Link>
-          </div>
+          <HireButton />
         </div>
       </main>
     );

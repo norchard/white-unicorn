@@ -30,6 +30,7 @@ export default class Form extends React.Component {
     const thanks = document.getElementById("thank-you");
     thanks.style.display = "block";
   }
+
   sendFeedback(templateId, variables) {
     window.emailjs
       .send("service_j2530if", templateId, variables)
@@ -43,6 +44,10 @@ export default class Form extends React.Component {
           err
         )
       );
+  }
+
+  componentDidMount() {
+    Utilities.FadeInUp("formButton");
   }
 
   render() {
@@ -101,6 +106,7 @@ export default class Form extends React.Component {
           />
 
           <input
+            id="formButton"
             className="button gradient"
             onMouseOver={Utilities.handleMouseOver}
             onMouseOut={Utilities.handleMouseOut}

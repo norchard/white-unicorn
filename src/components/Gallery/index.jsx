@@ -2,9 +2,19 @@ import React, { Component } from "react";
 import Image from "./Image";
 
 class Gallery extends Component {
+  componentDidMount() {
+    const gallery = document.getElementById("gallery");
+    gallery.style.opacity = 0;
+    gallery.style.transform = "translateY(80px)";
+    gallery.style.transition = "all 1s ease-in-out";
+    setTimeout(() => {
+      gallery.style.opacity = 100;
+      gallery.style.transform = "translateY(-80px)";
+    }, 500);
+  }
   render() {
     return (
-      <React.Fragment>
+      <div id="gallery">
         {this.props.images.map((image) => (
           <Image
             key={image.id}
@@ -16,7 +26,7 @@ class Gallery extends Component {
             onMouseOut={this.props.onMouseOut}
           />
         ))}
-      </React.Fragment>
+      </div>
     );
   }
 }
