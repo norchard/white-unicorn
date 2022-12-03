@@ -1,38 +1,763 @@
+/********************* Import Typekit Fonts *********************/
+@import url("https://use.typekit.net/udm8cpf.css");
+
+/********************* Declare Variables *********************/
+:root {
+  --gradient-one: #ff6e6e;
+  --gradient-two: #9244ff;
+  --background-dark: #1a1d23;
+  --heading-font: "ivypresto-display";
+  --paragraph-font: "montserrat";
+}
+
+/********************* Basic Styles *********************/
+
 .App {
+  text-align: center;
+  cursor: none;
+  min-height: 100vh;
+  background-color: var(--background-dark);
+  color: white;
+  font-family: var(--heading-font), serif;
+  transition: 0.25s;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+}
+
+/* .App.white a {
+  color: black;
+} */
+
+.App a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+main {
+  padding: 100px;
+  min-height: 100vh;
+}
+
+main a:hover,
+footer a:hover {
+  color: inherit;
+}
+p > a:hover,
+footer a:hover,
+.plain:hover,
+.menu-item:hover .index,
+.menu-link.active .index {
+  background: linear-gradient(217deg, var(--gradient-one), var(--gradient-two));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+article {
+  text-align: left;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+  object-fit: cover;
+}
+
+p {
+  font-family: var(--paragraph-font), sans-serif;
+}
+
+form {
+  font-family: var(--paragraph-font), sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+}
+textarea {
+  height: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input:focus,
+textarea:focus {
+  outline: none !important;
+  border-image: linear-gradient(
+      200deg,
+      var(--gradient-one),
+      var(--gradient-two)
+    )
+    10;
+  border-width: 3px;
+  border-style: solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/********************* Dark Background Styles *********************/
+
+.App.white {
+  background-color: white;
+  color: black;
+}
+
+.App.white footer {
+  background-color: var(--background-dark);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App.white footer .button {
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
+.App.white main .button {
+  color: black;
+}
+
+.App.white main .gradient {
+  color: white;
+}
+
+/********************* Cursor Styles *********************/
+
+#cursor {
+  width: 28px;
+  height: 28px;
+  border-radius: 20px;
+  background: linear-gradient(217deg, var(--gradient-one), var(--gradient-two));
+  display: inline;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  pointer-events: none;
+  margin-left: -22px;
+  margin-top: -22px;
+  transition: scale 0.4s ease-out;
+  z-index: 3;
+}
+
+#cursor.hover {
+  opacity: 50%;
+  scale: 2.5;
+  transition: scale 0.3s ease-in;
+}
+
+#circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 25px;
+  border: solid 1.5px rgb(137, 135, 179);
+  display: inline;
+  position: fixed;
+  pointer-events: none;
+  z-index: 3;
+  transition: all ease-in-out;
+}
+
+#circle.hover {
+  display: none;
+}
+
+/********************* Sort *********************/
+
+.project-tile {
+  cursor: pointer;
+  margin: 1rem;
+}
+
+.image-container img:hover {
+  transform: scale(1.1);
+}
+
+.image-container {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.work {
+  box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 0.2);
+  margin: 0.5em;
+}
+
+.image-title {
+  font-family: var(--paragraph-font);
+  text-align: center;
+  padding-top: 10px;
+  transform: translateY(20px);
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.project-tile:hover .image-title {
+  transform: translateY(0px);
+  visibility: visible;
+}
+
+.project-tile {
+  /* max-width: 500px; */
+  display: inline-block;
+  overflow: hidden;
+}
+
+/********************* Button Styles *********************/
+
+.button {
+  font-family: var(--paragraph-font);
+  margin: 20px;
+  padding: 20px 20px;
+  font-weight: 800;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  border-radius: 40px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  width: 300px;
+}
+
+.button :hover {
+  text-decoration: none;
+  color: white;
+}
+
+.gradient {
+  background: linear-gradient(217deg, var(--gradient-one), var(--gradient-two));
+  background-size: 200%;
+  background-position-x: 99%;
+  transition: 0.35s;
+  color: white;
+}
+
+.gradient:hover {
+  background-position-x: 0%;
+  transition: 0.35s;
+  color: white;
+}
+
+/********************* Footer Styles *********************/
+
+footer {
+  padding: 80px 100px 50px 100px;
+  background-color: white;
+  color: black;
+  min-height: 20vh;
+}
+
+footer .button {
+  color: black;
+  font-size: 18px;
+}
+
+#footer-logo {
+  width: 80px;
+  margin-bottom: 50px;
+}
+
+.white #footer-logo {
+  fill: white;
+}
+
+#credit {
+  margin: 0 auto;
+  padding: 120px 0 0 0;
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+}
+
+.white #credit a {
+  color: white;
+  white-space: nowrap;
+}
+
+#credit a {
+  color: black;
+  font-weight: 500;
+}
+
+/********************* Header Styles *********************/
+
+#logo {
+  max-width: 70px;
+  fill: white;
+  position: fixed;
+  top: 50px;
+  left: 40px;
+  transition: all 0.25s ease-in-out;
+  z-index: 2;
+}
+
+.white #logo {
+  fill: black;
+}
+
+#toggle-background {
+  padding: 10px;
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  z-index: 1;
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#toggle-icon {
+  border-radius: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  margin-left: 0px;
+}
+
+#toggle-background.white #toggle-icon {
+  margin-left: 45px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+/********************* Menu Styles *********************/
+
+#menu-body {
+  background-color: var(--background-dark);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: 0.25s;
+  display: none;
+  opacity: 0;
+}
+
+#menu-list {
+  padding-top: 10vh;
+  border-left: solid 3px black;
+  height: 100vh;
+}
+
+#menu-list li {
+  list-style: none;
+  text-align: left;
+}
+
+.App.white #menu-body {
+  background-color: white;
+  color: black;
+}
+
+.stack-text {
+  display: block;
+  transition: transform 0.25s ease-in-out;
+}
+
+#site-name {
+  position: fixed;
+  top: 85px;
+  left: 130px;
+  font-family: var(--paragraph-font), sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: white;
+}
+
+#site-name span {
+  font-weight: 100;
+}
+
+.menu-item {
+  margin: 6vh;
+  /* background-color: yellow; */
+  height: 80px;
+  line-height: 80px;
+  transition: transform 1s ease-in-out;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+  clear: both;
+}
+
+li.menu-item:hover .stack-text {
+  transform: translateY(-80px);
+}
+
+/********************* Home Page Styles *********************/
+
+.intro {
+  max-width: 710px;
+  margin: 0px auto 100px auto;
+  padding: 100px 0 100px 0;
+}
+
+/********************* About Page Styles *********************/
+
+.intro-about {
+  max-width: 480px;
+  margin: 0px auto;
+  padding: 100px 0 0 0;
+}
+.about {
+  max-width: 1100px;
+  margin: 0px auto;
+  padding: 50px 0;
+}
+
+.about a {
+  color: inherit;
+}
+
+.index {
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -20px;
+  font-size: 22px;
+  font-family: var(--paragraph-font), sans-serif;
+  font-weight: 700;
+  color: #575d69;
+  display: block;
+  letter-spacing: 2px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-link span {
+  font-weight: 300;
+}
+
+.menu-link:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-link.active span {
+  background: linear-gradient(217deg, var(--gradient-one), var(--gradient-two));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+#menu-toggle {
+  background-color: transparent;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  top: 60px;
+  right: 60px;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+  padding-top: 6px;
+  padding-left: 2px;
+}
+
+.bar {
+  z-index: 0;
+  margin: 8px auto;
+  width: 40px;
+  height: 5px;
+  background-color: white;
+  border-radius: 5px;
+  transition: all 0.25s ease-in-out;
+}
+
+/* .bar.b {
+  height: 4px;
+} */
+
+.a,
+.c {
+  width: 20px;
+}
+
+#menu-toggle:hover .a,
+#menu-toggle:hover .c {
+  width: 40px;
+}
+
+/* #menu-toggle:hover {
+  padding-top: 8px;
+  background-color: #adadad;
+}
+
+#menu-toggle:hover .bar {
+  margin: 6px auto;
+  width: 45px;
+  transform: scale(50%);
+} */
+
+/* #menu-toggle:hover .a,
+#menu-toggle:hover .c {
+  width: 40px;
+} */
+
+.App.white .bar {
+  background-color: black;
+}
+
+.ex {
+  transform-origin: 0;
+}
+
+.open .a {
+  transform: translateY(13px) rotate(45deg);
+  width: 40px;
+}
+
+.open .c {
+  transform: translateY(-13px) rotate(-45deg);
+  width: 40px;
+}
+
+.open .b {
+  transform: scale(0);
+}
+
+.open #menu-toggle :hover {
+  transform: none;
+}
+
+.open .b {
+  transform: scale(0);
+}
+
+.ceramics-intro {
+  max-width: 800px;
+  padding: 100px 0px 50px 15px;
+  text-align: left;
+}
+
+.work-intro {
+  text-align: left;
+}
+
+.work-intro .button {
+  text-align: left;
+  margin-left: 0px;
+}
+
+.work-intro h4 {
+  max-width: 950px;
+  padding: 120px 0px 20px 0px;
+}
+
+.work-intro p {
+  max-width: 850px;
+  padding: 20px 0px 20px 0px;
+}
+
+/* .work-intro a {
+  color: inherit;
+} */
+
+#work-main a {
+  color: white;
+}
+
+.App.white #work-main a {
+  color: black;
+}
+
+.work-intro a:hover {
+  background: linear-gradient(217deg, var(--gradient-one), var(--gradient-two));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/********************* Waving Hand Animation *********************/
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  0% {
+    -webkit-transform: rotate(deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
+  100% {
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotating {
+  0% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -ms-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  100% {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+.wave {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation: rotating 2s linear infinite;
+  -ms-animation: rotating 2s linear infinite;
+  -o-animation: rotating 2s linear infinite;
+  animation: rotating 2s linear infinite;
+}
+
+.contact-intro {
+  padding-top: 8vh;
+}
+
+#animation {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+  top: 0;
+  left: 0;
+  transition: all 1s ease-in-out;
+}
+
+/********************* Mobile Styles *********************/
+
+@media (max-width: 992px) {
+  main {
+    width: 100%;
+    padding: 20px 20px 70px 30px;
+  }
+  footer {
+    padding: 50px 60px;
+  }
+  .intro {
+    padding: 200px 20px 30px 20px;
+  }
+
+  .image-title {
+    display: none;
+  }
+
+  .project-tile {
+    margin: 8px;
+  }
+
+  .gallery {
+    width: 210px;
+    margin: 0px;
+  }
+  .about {
+    text-align: left;
+    padding: 40px;
+  }
+  .App {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .work-intro {
+    padding: 150px 0px 0px 0px;
+  }
+  .work-intro h4 {
+    padding: 0px;
+    text-align: left;
+  }
+  .contact-intro {
+    padding-top: 150px;
+  }
+  .intro-about {
+    margin-top: 50px;
+  }
+
+  #menu-body {
+    padding: 140px 100px 100px 100px;
+  }
+  .menu-item {
+    margin: 3vh;
+    /* background-color: yellow; */
+    height: 80px;
+    line-height: 80px;
+  }
+  #menu-list {
+    padding-top: 10vh;
+    border-left: none;
+    height: 100vh;
+  }
+  .ceramics-intro {
+    padding: 150px 0px 20px 0px;
+  }
+}
+
+@media (max-width: 1500) {
+  .ceramics-intro {
+    font-size: 20px;
+  }
+}
+
+/********************* Scrollbar Styles *********************/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border: solid 3px transparent;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border: solid 3px transparent;
+  border-radius: 45px;
+  background: rgba(90, 90, 90, 0.463);
+}
+body {
+  overflow: overlay;
 }
