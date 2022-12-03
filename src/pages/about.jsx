@@ -22,24 +22,7 @@ class About extends Component {
           <div className="wave">
             <h1>👋 </h1>
           </div>
-          <h1 className="display-2">
-            Hi, I'm Nicole.
-            {/* <span className="fly">H</span>
-              <span className="fly">i</span>
-              <span className="fly">,</span>
-              <span className="fly">&nbsp;</span>
-              <span className="fly">I</span>
-              <span className="fly">'</span>
-              <span className="fly">m</span>
-              <span className="fly">&nbsp;</span>
-              <span className="fly">N</span>
-              <span className="fly">i</span>
-              <span className="fly">c</span>
-              <span className="fly">o</span>
-              <span className="fly">l</span>
-              <span className="fly">e</span>
-              <span className="fly">.</span>{" "} */}
-          </h1>
+          <h1 className="display-2">Hi, I'm Nicole.</h1>
         </div>
         <p className="about">
           I am a self-taught web developer and graphic designer. In undergrad I

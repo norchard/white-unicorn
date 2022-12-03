@@ -9,7 +9,7 @@ const handleMouseOver = () => {
 };
 
 const handleMouseOut = () => {
-  console.log("mouseout");
+  // console.log("mouseout");
   const cursor = document.getElementById("cursor");
   const circle = document.getElementById("circle");
 

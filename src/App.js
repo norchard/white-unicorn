@@ -129,10 +129,6 @@ class App extends Component {
             <Route path="/work" element={<Work />} />
             <Route path="/ceramics" element={<Ceramics />} />
             <Route path="/contact" element={<Contact />} />
-            <Route
-              path="/work/intro-to-compilers"
-              element={<IntroToCompilers />}
-            />
             <Route path="/work/minesweeper" element={<Minesweeper />} />
           </Routes>
           <Footer />

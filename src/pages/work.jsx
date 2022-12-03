@@ -22,7 +22,10 @@ class Work extends Component {
                 </a>{" "}
                 is my latest front-end development project.
               </h4>
-              <a target="blank" href="https://whiteunicornagency.com/">
+              <a
+                target="blank"
+                href="https://github.com/norchard/new-portfolio"
+              >
                 <button style={{ padding: "0px" }} className="button plain">
                   View The Code
                 </button>
@@ -37,9 +40,12 @@ class Work extends Component {
           </div>
           <div className="row m-4">
             <div className="col-md-12 col-lg-6">
-              <Link to="/work/intro-to-compilers">
+              <a
+                target="blank"
+                href="https://medium.com/@norchard/an-intro-to-compilers-964aaf9d3534"
+              >
                 <div className="project-tile full-width">
-                  <h1>Intro to Compilers</h1>
+                  <h1>An Intro to Compilers</h1>
                   <div className="work image-container">
                     <img
                       alt="ceramics"
@@ -50,7 +56,7 @@ class Work extends Component {
                     Former Hacker News #1 Blog Post
                   </h3>
                 </div>
-              </Link>
+              </a>
             </div>
             <div className="col-md-12 col-lg-6">
               <Link to="/work/minesweeper">

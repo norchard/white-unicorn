@@ -28,7 +28,7 @@ class Menu extends Component {
         <div id="menu-body">
           <Link onClick={Utilities.closeMenu} to="/">
             <h4 id="site-name">
-              Imitation <span>Studio</span>
+              Nicole <span>Orchard</span>
             </h4>
           </Link>
           <div className="row">

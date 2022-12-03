@@ -25,8 +25,8 @@ class Footer extends Component {
             </a>
           </div>
           <div className="col-md-12 col-lg-4">
-            <a href="mailto:hello@imitation.studio" className="button">
-              hello@imitation.studio
+            <a href="mailto:norchard24@gmail.com" className="button">
+              norchard24@gmail.com
             </a>
           </div>
         </div>

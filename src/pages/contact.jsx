@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Utilities from "../components/Utilities";
+import Form from "../components/Form";
+// import Utilities from "../components/Utilities";
 
 class Contact extends Component {
   state = {};
@@ -8,8 +9,8 @@ class Contact extends Component {
       <main>
         <h1 className="contact-intro display-2">Want to Hire Me?</h1>
         <p>Drop me a note about job opportunities or anything else!</p>
-        <form action="/my-handling-form-page" method="post">
-          {/* <label for="name">Name:</label> */}
+        <Form />
+        {/* <form action="/my-handling-form-page" method="post">
           <input
             className="m-2"
             type="text"
@@ -18,7 +19,6 @@ class Contact extends Component {
             placeholder="Name"
           />
 
-          {/* <label for="mail">E-mail:</label> */}
           <input
             className="m-2"
             type="email"
@@ -27,7 +27,6 @@ class Contact extends Component {
             placeholder="Email"
           />
 
-          {/* <label for="msg">Message:</label> */}
           <textarea
             className="m-2"
             id="msg"
@@ -42,7 +41,7 @@ class Contact extends Component {
           >
             Submit
           </button>
-        </form>
+        </form> */}
       </main>
     );
   }
