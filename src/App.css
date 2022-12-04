@@ -407,6 +407,10 @@ footer .button {
   color: white;
 }
 
+.App.white #site-name {
+  color: black;
+}
+
 #site-name span {
   font-weight: 100;
 }
@@ -689,6 +693,10 @@ li.menu-item:hover .stack-text {
 
 #formButton {
   margin-top: 50px;
+}
+
+#projects {
+  overflow: visible;
 }
 
 /********************* Mobile Styles *********************/
