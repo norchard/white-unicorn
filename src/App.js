@@ -6,6 +6,7 @@ import About from "./pages/about";
 import Work from "./pages/work";
 import Ceramics from "./pages/ceramics";
 import Contact from "./pages/contact";
+import IntroToCompilers from "./pages/intro-to-compilers.jsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Utilities from "./components/Utilities";
@@ -47,10 +48,11 @@ class App extends Component {
 
   handleScroll = () => {
     var lastScrollTop = 0;
+    const logo = document.getElementById("logo");
+    const toggleBackground = document.getElementById("toggle-background");
+    const menu = document.getElementById("menu-toggle");
+
     const hideHeader = () => {
-      const logo = document.getElementById("logo");
-      const toggleBackground = document.getElementById("toggle-background");
-      const menu = document.getElementById("menu-toggle");
       if (lastScrollTop < window.scrollY) {
         logo.classList.add("hidden");
         toggleBackground.classList.add("hidden");
@@ -68,6 +70,20 @@ class App extends Component {
 
     // var timer = null;
     window.addEventListener("scroll", hideHeader);
+
+    // window.addEventListener("scroll", () => {
+    //   if (document.body.scrollTop === 0) {
+    //     const menu = document.getElementById("menu-body");
+    //     logo.classList.remove("hidden");
+    //     toggleBackground.classList.remove("hidden");
+    //     menu.classList.remove("hidden");
+    //   }
+    // });
+    // window.addEventListener("scroll", () => {
+    //   const button = document.getElementById("hire-me");
+    //   console.log(button.getBoundingClientRect().top);
+    // });
+
     // window.addEventListener("scroll", showScrollBar);
     // window.addEventListener(
     //   "scroll",

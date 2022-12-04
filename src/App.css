@@ -694,13 +694,26 @@ li.menu-item:hover .stack-text {
 /********************* Mobile Styles *********************/
 
 @media (max-width: 992px) {
+  .hidden {
+    opacity: 100%;
+  }
   main {
     width: 100%;
-    padding: 20px 20px 70px 30px;
+    padding: 20px 10px 70px 10px;
   }
   footer {
-    padding: 50px 60px;
+    padding: 50px 20px;
+    overflow: hidden;
   }
+  footer .button {
+    font-size: 15px;
+    padding: 0px;
+  }
+  footer #credit {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
   #intro {
     padding: 200px 20px 30px 20px;
   }
@@ -713,15 +726,19 @@ li.menu-item:hover .stack-text {
     margin: 8px;
   }
 
-  .gallery {
-    width: 210px;
+  #gallery {
+    width: 100%;
     margin: 0px;
+  }
+  .gallery {
+    width: 140px;
   }
   .about {
     text-align: left;
     padding: 40px;
   }
   .App {
+    width: 100%;
     font-size: 20px;
     line-height: 30px;
   }
@@ -752,6 +769,64 @@ li.menu-item:hover .stack-text {
   }
   .ceramics-intro {
     padding: 150px 0px 20px 0px;
+  }
+  #menu-toggle {
+    top: 10px;
+    right: 10px;
+    transform: scale(0.8);
+  }
+  #logo {
+    width: 40px;
+    top: 20px;
+    left: 10px;
+  }
+  #toggle-background {
+    bottom: -10px;
+    right: -10px;
+    transform: scale(0.8);
+  }
+  #cursor {
+    display: none;
+  }
+  #circle {
+    display: none;
+  }
+  .about {
+    padding: 10px 10px 50px 10px;
+    font-size: 17px;
+    line-height: 22px;
+  }
+  #work-main {
+    padding: 10px 0px;
+  }
+  div.m-4 {
+    margin: 0px !important;
+  }
+  #menu-body {
+    width: 100%;
+    padding: 30px;
+  }
+
+  form {
+    width: 350px;
+    margin-right: 22px;
+  }
+  #formButton {
+    margin-left: 40px;
+  }
+  #contact-intro {
+    padding-top: 70px;
+  }
+  .row {
+    margin: 0px;
+  }
+  #site-name {
+    top: 38px;
+    left: 60px;
+    font-size: 15px;
+  }
+  #projects {
+    padding-right: 25px;
   }
 }
 
