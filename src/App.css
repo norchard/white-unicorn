@@ -124,6 +124,10 @@ textarea:focus {
   margin-bottom: -80px;
 }
 
+.App.white #thank-you {
+  color: black;
+}
+
 /********************* Dark Background Styles *********************/
 
 .App.white {
@@ -721,10 +725,6 @@ li.menu-item:hover .stack-text {
     line-height: 18px;
   }
 
-  #intro {
-    padding: 200px 20px 30px 20px;
-  }
-
   .image-title {
     display: none;
   }
@@ -739,6 +739,9 @@ li.menu-item:hover .stack-text {
   }
   .gallery {
     width: 140px;
+  }
+  .gallery .project-tile {
+    max-width: 270px;
   }
   .about {
     text-align: left;

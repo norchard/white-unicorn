@@ -17,7 +17,7 @@ class Work extends Component {
           <div className="row m-4">
             <div className="work-intro">
               <h4 className="display-4">
-                This portfolio website inspired by the beautiful design of{" "}
+                This portfolio website inspired by the elegant design of{" "}
                 <a target="blank" href="https://whiteunicornagency.com/">
                   White Unicorn Agency
                 </a>{" "}
