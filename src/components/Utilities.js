@@ -131,11 +131,11 @@ const makeFunLetters2 = (idName) => {
 const FadeInUp = (idName) => {
   const button = document.getElementById(idName);
   button.style.opacity = 0;
-  button.style.transform = "translateY(50px)";
+  button.style.transform = "translateY(70px)";
   button.style.transition = "all 1s ease-in-out";
   setTimeout(() => {
     button.style.opacity = 100;
-    button.style.transform = "translateY(-20px)";
+    button.style.transform = "translateY(0px)";
   }, 100);
 };
 

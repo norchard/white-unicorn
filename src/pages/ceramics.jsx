@@ -6,6 +6,7 @@ class Ceramics extends Component {
 
   componentDidMount() {
     Utilities.makeCursorLinkBehavior();
+    Utilities.FadeInUp("ceramics-fade-up");
   }
 
   render() {
@@ -26,47 +27,58 @@ class Ceramics extends Component {
             </div>
           </div>
 
-          <div className="row">
-            <div className="col-sm-12 col-md-4 p-3">
-              <div className="image-container">
-                <img alt="ceramics" src={require("../assets/ceramics-3.jpg")} />
+          <div id="ceramics-fade-up">
+            <div className="row">
+              <div className="col-sm-12 col-md-4 p-3">
+                <div className="image-container">
+                  <img
+                    alt="ceramics"
+                    src={require("../assets/ceramics-3.jpg")}
+                  />
+                </div>
+              </div>
+              <div className="col-sm-12 col-md-4 p-3">
+                <div className="image-container">
+                  <img
+                    alt="ceramics"
+                    src={require("../assets/ceramics-5.jpg")}
+                  />
+                </div>
+              </div>
+              <div className="col-sm-12 col-md-4 p-3">
+                <div className="image-container">
+                  <img
+                    alt="ceramics"
+                    src={require("../assets/ceramics-6.jpg")}
+                  />
+                </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-4 p-3">
-              <div className="image-container">
-                <img alt="ceramics" src={require("../assets/ceramics-5.jpg")} />
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 p-3">
-              <div className="image-container">
-                <img alt="ceramics" src={require("../assets/ceramics-6.jpg")} />
-              </div>
-            </div>
-          </div>
 
-          <div className="row">
-            <div className="col-sm-12 col-md-4 p-3">
-              <div className="image-container">
-                <img
-                  alt="ceramics"
-                  src={require("../assets/ceramics-14.jpg")}
-                />
+            <div className="row">
+              <div className="col-sm-12 col-md-4 p-3">
+                <div className="image-container">
+                  <img
+                    alt="ceramics"
+                    src={require("../assets/ceramics-14.jpg")}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-sm-12 col-md-4 p-3">
-              <div className="image-container">
-                <img
-                  alt="ceramics"
-                  src={require("../assets/ceramics-15.jpg")}
-                />
+              <div className="col-sm-12 col-md-4 p-3">
+                <div className="image-container">
+                  <img
+                    alt="ceramics"
+                    src={require("../assets/ceramics-15.jpg")}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-sm-12 col-md-4 p-3">
-              <div className="image-container">
-                <img
-                  alt="ceramics"
-                  src={require("../assets/ceramics-10.jpg")}
-                />
+              <div className="col-sm-12 col-md-4 p-3">
+                <div className="image-container">
+                  <img
+                    alt="ceramics"
+                    src={require("../assets/ceramics-10.jpg")}
+                  />
+                </div>
               </div>
             </div>
           </div>
