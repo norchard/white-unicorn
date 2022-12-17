@@ -739,10 +739,9 @@ li.menu-item:hover .stack-text {
   }
   .gallery {
     width: 140px;
+    max-width: 250px !important;
   }
-  .gallery .project-tile {
-    max-width: 270px;
-  }
+
   .about {
     text-align: left;
     padding: 40px;
