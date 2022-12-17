@@ -702,6 +702,10 @@ li.menu-item:hover .stack-text {
   overflow: visible;
 }
 
+.gallery {
+  max-width: 270px;
+}
+
 /********************* Mobile Styles *********************/
 
 @media (max-width: 992px) {
@@ -739,9 +743,7 @@ li.menu-item:hover .stack-text {
   }
   .gallery {
     width: 140px;
-    max-width: 250px !important;
   }
-
   .about {
     text-align: left;
     padding: 40px;
@@ -750,6 +752,7 @@ li.menu-item:hover .stack-text {
     width: 100%;
     font-size: 20px;
     line-height: 30px;
+    cursor: default;
   }
   .work-intro {
     padding: 150px 0px 0px 0px;
