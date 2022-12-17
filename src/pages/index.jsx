@@ -63,7 +63,7 @@ class Home extends Component {
       <main>
         <div className="container-fluid">
           <h3 id="intro" className="display-3">
-            I am a front-end developer who enjoys re-creating work that I admire
+            I am a front-end developer and web designer
           </h3>
 
           {/* <div className="image-container">

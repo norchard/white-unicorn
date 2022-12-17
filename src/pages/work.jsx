@@ -7,7 +7,8 @@ class Work extends Component {
 
   componentDidMount() {
     Utilities.makeCursorLinkBehavior();
-    Utilities.FadeInUp("projects");
+    Utilities.FadeInUp("projects-1");
+    Utilities.FadeInUp("projects-2");
   }
 
   render() {
@@ -35,11 +36,12 @@ class Work extends Component {
                 I built this site using React, React-Router-DOM, and Bootstrap.
                 I don't take credit for the design, but I do take credit for the
                 code. Another project is in the works, but in the meanwhile,
-                enjoy a couple of old programming projects.
+                enjoy a couple of old programming projects and recent web design
+                work.
               </p>
             </div>
           </div>
-          <div id="projects" className="row m-4">
+          <div id="projects-1" className="row m-4">
             <div className="col-md-12 col-lg-6">
               <a
                 target="blank"
@@ -74,6 +76,36 @@ class Work extends Component {
                   </h3>
                 </div>
               </Link>
+            </div>
+          </div>
+          <div id="projects-2" className="row m-4">
+            <div className="col-md-12 col-lg-6">
+              <a target="blank" href="https://nelson-farms.com/">
+                <div className="project-tile full-width">
+                  <h1>Nelson Farms</h1>
+                  <div className="work image-container">
+                    <img
+                      alt="ceramics"
+                      src={require("../assets/nelson-farms.jpg")}
+                    />
+                  </div>
+                  <h3 className="image-title">Web Design</h3>
+                </div>
+              </a>
+            </div>
+            <div className="col-md-12 col-lg-6">
+              <a target="blank" href="https://kangaroosmiles.com">
+                <div className="project-tile full-width">
+                  <h1>Kangaroo Smiles</h1>
+                  <div className="work image-container">
+                    <img
+                      alt="ceramics"
+                      src={require("../assets/kangaroo-desktop.jpg")}
+                    />
+                  </div>
+                  <h3 className="image-title">Web Design</h3>
+                </div>
+              </a>
             </div>
           </div>
         </div>
