@@ -7,8 +7,8 @@ class Work extends Component {
 
   componentDidMount() {
     Utilities.makeCursorLinkBehavior();
-    Utilities.FadeInUp("projects-1");
-    Utilities.FadeInUp("projects-2");
+    // Utilities.FadeInUp("projects-1");
+    // Utilities.FadeInUp("projects-2");
   }
 
   render() {
