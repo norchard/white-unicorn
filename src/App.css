@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Canela";
+  font-style: normal;
+  font-weight: 500;
+  font-display: block;
+  src: url(./assets/Canela-Regular.woff2) format("woff2");
+}
+
 /********************* Import Typekit Fonts *********************/
 @import url("https://use.typekit.net/udm8cpf.css");
 
@@ -6,7 +14,7 @@
   --gradient-one: #ff6e6e;
   --gradient-two: #9244ff;
   --background-dark: #1a1d23;
-  --heading-font: "ivypresto-display";
+  --heading-font: "Canela";
   --paragraph-font: "montserrat";
 }
 
